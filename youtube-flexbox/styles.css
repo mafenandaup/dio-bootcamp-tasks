@@ -29,12 +29,16 @@ body {
     gap: 1rem;
 }
 
+#yt-burger{
+    gap: 3rem;
+}
+
 .menu {
     background-color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%; 
+    width: 100%;
     padding: 0 2rem;
     height: 4rem;
     position: sticky;
@@ -55,16 +59,16 @@ body {
     width: 16rem;
     justify-content: space-between;
 
-    && input{
+    && input {
         height: 1.9rem;
-         width: 14rem;
-         display: inline;
-         border: none;
-        
+        width: 14rem;
+        display: inline;
+        border: none;
+
     }
 }
 
-.search-icon{
+.search-icon {
     background-color: #F9F9F9;
     border-left: solid #CCCCCC 2px;
     padding: 0.2rem;
@@ -72,4 +76,78 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.watching-video {
+    display: flex;
+    flex-direction: column;
+    width: 952px;
+    gap: 16px;
+    margin-left: 104px;
+    margin-top: 20px;
+
+    && iframe {
+        width: 952px;
+        height: 537px;
+    }
+
+    && h1{
+        font-weight: 600;
+        font-size: 18px;
+    }
+}
+
+.other-videos{
+    width: 372px;
+    height: auto;
+
+    display: flex;
+    position: relative;
+    top: 20px;
+    left: 30px;
+    gap: 16px;
+    flex-direction: column;
+}
+
+/*each video has 89px height and gap of 16px, total 372width on other-videos flexbox*/
+
+.video-template{
+    display: flex;
+    flex-direction: row;
+    height: 89px;
+
+    width: 100%;
+    gap: 16px;
+
+    && img{
+        width: 160px;
+        height: 90px;
+    }
+}
+
+a{
+    color: rgb(0, 55, 182);
+}
+
+.template-desc{
+    display: flex;
+   flex-direction: column;
+   justify-content: baseline;
+
+    && p{
+        gap: 20px;
+        font-size: 10px;
+        color: #767272;
+    }
+    && h5{
+        font-weight: 600;
+        margin-bottom: 24px;
+    }
+}
+
+
+
+main{
+    display: flex;
+    flex-direction: row;
 }
