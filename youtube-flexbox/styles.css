@@ -10,7 +10,7 @@ root {
     padding: 0;
     box-sizing: border-box;
     font-family: Roboto;
-    font-weight: 600;
+    font-weight: 400;
     font-style: normal;
 }
 
@@ -18,17 +18,59 @@ body {
     min-height: 100vh;
     width: 100vw;
     display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #F9F9F9;
     color: var(--almost-black);
 }
 
-.menu{
+.inline-items-menu {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.menu {
     background-color: white;
 
     display: flex;
-   align-items: center;
-   justify-content: space-around;
-   width: 100rem;
+    align-items: center;
+    justify-content: space-between;
+    width: 100rem;
+    padding: 0rem 2rem;
     height: 4rem;
     align-self: baseline;
+    position: sticky;
+    top: 0;
+}
+
+#my-icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+}
+
+.search-bar {
+    border: solid #CCCCCC 2px;
+    display: flex;
+    width: 16rem;
+    justify-content: space-between;
+
+    && input{
+        height: 1.9rem;
+         width: 14rem;
+         display: inline;
+         border: none;
+        
+    }
+}
+
+.search-icon{
+    background-color: #F9F9F9;
+    border-left: solid #CCCCCC 2px;
+    padding: 0.2rem;
+    width: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
