@@ -18,8 +18,7 @@ body {
     min-height: 100vh;
     width: 100vw;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     background-color: #F9F9F9;
     color: var(--almost-black);
 }
@@ -32,17 +31,17 @@ body {
 
 .menu {
     background-color: white;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100rem;
-    padding: 0rem 2rem;
+    width: 100%; 
+    padding: 0 2rem;
     height: 4rem;
-    align-self: baseline;
     position: sticky;
     top: 0;
+    z-index: 1;
 }
+
 
 #my-icon {
     width: 2.4rem;
