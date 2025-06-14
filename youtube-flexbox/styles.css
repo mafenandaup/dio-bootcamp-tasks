@@ -1,4 +1,4 @@
-root {
+.root {
     --yt-red: #FF0000;
     --white: #FFFFFF;
     --almost-black: #282828;
@@ -29,7 +29,7 @@ body {
     gap: 1rem;
 }
 
-#yt-burger{
+#yt-burger {
     gap: 3rem;
 }
 
@@ -56,7 +56,8 @@ body {
 .search-bar {
     border: solid #CCCCCC 2px;
     display: flex;
-    width: 16rem;
+    width: 24rem;
+    border-radius: 10px;
     justify-content: space-between;
 
     && input {
@@ -64,6 +65,7 @@ body {
         width: 14rem;
         display: inline;
         border: none;
+        border-radius: 10px;
 
     }
 }
@@ -76,6 +78,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
 }
 
 .watching-video {
@@ -89,15 +92,87 @@ body {
     && iframe {
         width: 952px;
         height: 537px;
+        border-radius: 0.5rem;
+
     }
 
-    && h1{
+    && h1 {
         font-weight: 600;
         font-size: 18px;
     }
+
+    && h5{
+font-weight: 600;
+    }
+
+    && p {
+        color: #515151;
+        font-size: 14px;
+    }
 }
 
-.other-videos{
+.video-actions {
+    width: 902px;
+    height: 42px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.action-btns {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    && img {
+        height: 20px;
+    }
+
+    && h4 {
+        font-weight: 600;
+        font-size: 14px;
+    }
+}
+
+.subscribe {
+    display: flex;
+    flex-direction: row;
+}
+
+button {
+    color: #FFFFFF;
+    background-color: #cb0101;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    border: solid crimson 1px;
+    border-radius: 4px;
+}
+
+.channel-desc {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+
+    && h5 {
+        font-size: 12px;
+        font-weight: bold;
+        text-align: left;
+        margin-left: 6px;
+    }
+
+    && p {
+        font-size: 10px;
+        text-align: left;
+        margin-right: 8px;
+        color: #242222 ;
+
+    }
+}
+
+.other-videos {
     width: 372px;
     height: auto;
 
@@ -111,7 +186,7 @@ body {
 
 /*each video has 89px height and gap of 16px, total 372width on other-videos flexbox*/
 
-.video-template{
+.video-template {
     display: flex;
     flex-direction: row;
     height: 89px;
@@ -119,27 +194,29 @@ body {
     width: 100%;
     gap: 16px;
 
-    && img{
+    && img {
         width: 160px;
         height: 90px;
+        border-radius: 12px;
     }
 }
 
-a{
+a {
     color: rgb(0, 55, 182);
 }
 
-.template-desc{
+.template-desc {
     display: flex;
-   flex-direction: column;
-   justify-content: baseline;
+    flex-direction: column;
+    justify-content: baseline;
 
-    && p{
+    && p {
         gap: 20px;
         font-size: 10px;
         color: #767272;
     }
-    && h5{
+
+    && h5 {
         font-weight: 600;
         margin-bottom: 24px;
     }
@@ -147,7 +224,7 @@ a{
 
 
 
-main{
+main {
     display: flex;
     flex-direction: row;
 }
