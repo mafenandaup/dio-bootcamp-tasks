@@ -60,3 +60,50 @@ function calculaImc(peso, altura) {
 }
 
 console.log((calculaImc(60, 1.60)))
+
+// Entendendo objetos e como funcionam
+
+
+const pessoas = [
+
+    {
+    nome: "Maria Fernanda",
+    idade: 20,
+    profissao: "Desempregada"
+    },
+     {
+    nome: "Jonas",
+    idade: 22,
+    profissao: "Técnico Enfermagem"
+    },
+      {
+    nome: "Alicia",
+    idade: 59,
+    profissao: "Farmacêutica"
+    },
+       {
+    nome: "Igor",
+    idade: 29,
+    profissao: "Professor de física"
+    },
+]
+pessoas[0].altura = 1.69 //propriedades de objetos não sofrem hoisting
+console.log(pessoas)
+
+const produto = {
+    nome: "Iphone 3",
+    tipo: "Eletrônicos",
+    valor: 1500.99,
+    
+    descrever: function () {
+        console.log(`Este produto é um ${this.nome} , do tipo ${this.tipo}. atualmente custando ${this.valor}`)
+    }
+}
+
+console.log(produto)
+produto.descrever(); // já loga a função dentro do produto.
+
+// para acessar um atributo:
+
+const atributo = 'nome';
+console.log(pessoas[2][atributo])
