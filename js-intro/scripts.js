@@ -67,24 +67,24 @@ console.log((calculaImc(60, 1.60)))
 const pessoas = [
 
     {
-    nome: "Maria Fernanda",
-    idade: 20,
-    profissao: "Desempregada"
+        nome: "Maria Fernanda",
+        idade: 20,
+        profissao: "Desempregada"
     },
-     {
-    nome: "Jonas",
-    idade: 22,
-    profissao: "Técnico Enfermagem"
+    {
+        nome: "Jonas",
+        idade: 22,
+        profissao: "Técnico Enfermagem"
     },
-      {
-    nome: "Alicia",
-    idade: 59,
-    profissao: "Farmacêutica"
+    {
+        nome: "Alicia",
+        idade: 59,
+        profissao: "Farmacêutica"
     },
-       {
-    nome: "Igor",
-    idade: 29,
-    profissao: "Professor de física"
+    {
+        nome: "Igor",
+        idade: 29,
+        profissao: "Professor de física"
     },
 ]
 pessoas[0].altura = 1.69 //propriedades de objetos não sofrem hoisting
@@ -94,7 +94,7 @@ const produto = {
     nome: "Iphone 3",
     tipo: "Eletrônicos",
     valor: 1500.99,
-    
+
     descrever: function () {
         console.log(`Este produto é um ${this.nome} , do tipo ${this.tipo}. atualmente custando ${this.valor}`)
     }
@@ -107,3 +107,84 @@ produto.descrever(); // já loga a função dentro do produto.
 
 const atributo = 'nome';
 console.log(pessoas[2][atributo])
+
+
+// Como criar classes
+
+class Pessoa {
+
+    nomezin;
+    idade;
+    profissao;
+
+    constructor(nomezin, idade, profissao) {
+        this.nomezin = nomezin;
+        this.idade = idade;
+        this.profissao = profissao;
+    }
+    describe() { // não precisa declarar o "function" dentro de um objeto
+        console.log(`Meu nome é ${this.nomezin}, tenho ${this.idade} anos e sou ${this.profissao}`)
+    }
+}
+
+const mafefis = new Pessoa("Maria Fernanda", 20, "desempregada");
+console.log(mafefis)
+mafefis.describe();
+
+class Carro {
+    marca;
+    cor;
+    gastoMédioporKm;
+
+    constructor(marca, cor, gastoMédioporKm) {
+        this.marca = marca
+        this.cor = cor;
+        this.gastoMédioporKm = gastoMédioporKm
+    }
+
+    gastoPorPercurso(distancia, combustivelPreco) {
+        return Math.ceil(distancia * this.gastoMédioporKm * combustivelPreco)
+
+    }
+}
+
+const uno = new Carro('Fiat', 'Azul', 2 / 12)
+console.log(uno)
+console.log(uno.gastoPorPercurso(70, 5))
+
+class Paciente {
+    nome;
+    peso;
+    altura;
+
+    constructor(nome, peso, altura) {
+        this.nome = nome;
+        this.peso = peso;
+        this.altura = altura;
+    }
+
+    calcularImc(peso, altura) {
+        return this.peso / (this.altura * this.altura)
+    }
+
+    classificarImc() {
+        const imc = this.calcularImc();
+        if (imc < 18.5) {
+            console.log('Abaixo do peso.');
+        } else if (imc >= 18.5 && imc <= 25) {
+            console.log('Peso normal.');
+        } else if (imc > 25 && imc <= 30) {
+            console.log('Acima do peso.');
+        } else if (imc > 30 && imc <= 40) {
+            console.log('Obeso.');
+        } else if (imc > 40) {
+            console.log('Obesidade grave.');
+        } else {
+            console.log('Informações inválidas.');
+        }
+    }
+}
+
+const josi = new Paciente("Josi", 49, 1.70)
+console.log(josi)
+josi.classificarImc();
