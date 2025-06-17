@@ -28,7 +28,3 @@
 
 // Exercício 15
 
-// Exercício 16
-
-// Exercício 17
-

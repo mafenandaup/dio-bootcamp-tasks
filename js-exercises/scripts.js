@@ -110,3 +110,12 @@ function indexSearch(arr, num) {
 
 const busca = indexSearch(arrNumbers, 48)
 console.log(busca)
+
+// exercício 7: spread operator em string
+
+const bemvindo = 'bem vindo ao meu canal';
+
+let letters = [...bemvindo].join('-') // cada letra terá um hifen junto 
+letters.forEach(letter => {
+    console.log(letter)
+})
