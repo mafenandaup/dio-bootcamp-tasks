@@ -272,7 +272,6 @@ button:hover {
         flex-direction: row;
         align-items: center;
         justify-content: center;
-
     }
 
     .sec3-display {
@@ -281,6 +280,10 @@ button:hover {
         align-items: center;
         justify-content: center;
 
+    }
+
+    #imgsections{
+        width: 420px;
     }
 
     .text-display {
@@ -344,6 +347,31 @@ button:hover {
         border-radius: 28px;
         border: none;
     }
+}
+
+    .sec4-display {
+        width: 784px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        && img {
+            width: 400px;
+            height: 250px;
+        }
+
+    }
+
+    .special-text {
+        width: 440px;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+
+    #title-luckiest {
+    font-family: "Luckiest Guy", cursive;
+    font-size: 30px;
 }
 
 }
