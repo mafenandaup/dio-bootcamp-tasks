@@ -1,0 +1,117 @@
+:root {
+    --nearly-white: #F0F2F6;
+    --blueish: #AAB3C7;
+    --red-charmander: #F42A28;
+    --bulba-green: #14A06F;
+    --even-more-blue: #37A5C6;
+    --brownish: #716B45;
+    --bright-green: #53A063;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-style: normal;
+    font-family: Roboto, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background-color: #F9F9F9;
+}
+
+.content {
+    padding: 2rem;
+    background-color: #ffffff;
+    height: 100vh;
+    width: 100vw;
+}
+
+.pokemons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+.pokemon {
+    margin: .5rem;
+    padding: 1rem;
+    background-color: var(--bulba-green);
+    color: #ffffff;
+    font-weight: 500;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.pokemon .name {
+    color: white;
+    margin: .25rem .25rem;
+
+}
+
+.pokemon .detail img {
+    max-width: 100%;
+    height: 70px;
+    margin-left: .25rem;
+}
+
+.pokemon .detail .types .type {
+    background-color: #61E1CA;
+    color: white;
+    padding: .25rem .5rem;
+    margin: .25rem;
+    border-radius: 1rem;
+    font-size: 0.625rem;
+}
+
+.detail {
+    display: flex;
+    flex-direction: row;
+}
+
+.pokemon .types {
+    list-style: none;
+}
+
+.pokemon .number {
+    color: rgba(0, 0, 0, 0.3);
+    text-align: right;
+    font-size: .625rem;
+}
+
+@media screen and (max-width: 768px) {
+    .content {
+        max-height: auto;
+        max-width: 992px;
+        margin: 1rem 1rem;
+    }
+
+    .pokemons {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+  .pokemons{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 576px) {
+  .pokemons{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
