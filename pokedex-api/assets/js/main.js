@@ -1,7 +1,6 @@
 
-const offset = 0
-const limit = 10
-const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`
+const pokemonList = document.getElementById('pokemonList')
+
 
 function convertPokemonToLi(pokemon) {
     return `<li class="pokemon"><span class="number">#001</span>
@@ -18,22 +17,16 @@ function convertPokemonToLi(pokemon) {
             </li>`
 }
 
-const pokemonList = document.getElementById('pokemonList')
 
-fetch(url)  // FETCH retorna uma promise ("promessa" de um response conforme executa a busca, se der tudo certo)
-    .then((response) => response.json()) //quando o recurso (url) for disponibilizado, o then é chamado.
+pokeApi.getFilteredPokemons().then((pokemons = []) => {// faz a chadmada do fetch no outro arquivo, auxiliando a organizar melhor o código. a partir daí ele já faz também a chamada da arrow function pra converter cada pokemon em LI.
 
-    // THEN tem uma função com a respose como parâmetro. Quando ele terminar a req. o THEN será chamado e vai passar essa função dentro das chaves.
 
-    .then((responseBody) => responseBody.results)// aqui já retorna o res convertido 
-    // //na vida real não é boa prática ter tantos callbacks, aqui é só pra ser mais dinâmico
-    .then((pokemons) => {
-        for (let i = 0; i < pokemons.length; i++) {
-            const pokemon = pokemons[i]
-            pokemonList.innerHTML += convertPokemonToLi(pokemon)
-        }
-    })
-    .catch((error) => console.error(error))
+    const newList = pokemons.map((pokemon) => convertPokemonToLi(pokemon))
+
+    const newHtml = newList.join('') // junta todos os elementos da lista em uma string, nesse caso sem separador; por default, se coloca uma vírgula
+    pokemonList.innerHTML += newHtml
+    console.log(newList)
+})
 
     .finally(function () {
         console.log('Requisição concluída') // executa o bloco de código independente do sucesso ou fracasso da requisição.
