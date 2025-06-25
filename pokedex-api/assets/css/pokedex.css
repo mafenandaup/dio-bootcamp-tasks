@@ -1,29 +1,4 @@
-:root {
-    --nearly-white: #F0F2F6;
-    --blueish: #AAB3C7;
-    --red-charmander: #F42A28;
-    --bulba-green: #14A06F;
-    --even-more-blue: #37A5C6;
-    --brownish: #716B45;
-    --bright-green: #53A063;
-}
 
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-style: normal;
-    font-family: Roboto, sans-serif;
-}
-
-body {
-    min-height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    background-color: #F9F9F9;
-}
 
 .content {
     padding: 2rem;
@@ -40,11 +15,83 @@ body {
     grid-template-columns: repeat(2, 1fr);
 }
 
+/* COLOR FOR EACH TYPE */
+.normal {
+    background-color: #a6a877;
+}
+
+.grass {
+    background-color: #77c850;
+}
+
+.fire {
+    background-color: #ee7f30;
+}
+
+.water {
+    background-color: #678fee;
+}
+
+.electric {
+    background-color: #f7cf2e;
+}
+
+.ice {
+    background-color: #98d5d7;
+}
+
+.ground {
+    background-color: #dfbf69;
+}
+
+.flying {
+    background-color: #a98ff0;
+}
+
+.poison {
+    background-color: #a040a0;
+}
+
+.fighting {
+    background-color: #bf3029;
+}
+
+.psychic {
+    background-color: #f65687;
+}
+
+.dark {
+    background-color: #725847;
+}
+
+.rock {
+    background-color: #b8a137;
+}
+
+.bug {
+    background-color: #a8b720;
+}
+
+.ghost {
+    background-color: #6e5896;
+}
+
+.steel {
+    background-color: #b9b7cf;
+}
+
+.dragon {
+    background-color: #6f38f6;
+}
+
+.fairy {
+    background-color: #f9aec7;
+}
+
 
 .pokemon {
     margin: .5rem;
     padding: 1rem;
-    background-color: var(--bulba-green);
     color: #ffffff;
     font-weight: 500;
     border-radius: 1rem;
@@ -56,6 +103,7 @@ body {
 .pokemon .name {
     color: white;
     margin: .25rem .25rem;
+    text-transform: uppercase;
 
 }
 
@@ -66,12 +114,13 @@ body {
 }
 
 .pokemon .detail .types .type {
-    background-color: #61E1CA;
     color: white;
     padding: .25rem .5rem;
     margin: .25rem;
     border-radius: 1rem;
     font-size: 0.625rem;
+    text-align: center;
+    filter: brightness(1.15);
 }
 
 .detail {
