@@ -2,6 +2,7 @@
 
 const numeros = [23, 4, 56, 7, 2, 3, 9, 1]
 const numeros2 = [3, 43, 6, 27, 2, 3, 9, 1]
+const personagens = ['Bob esponja', 'Patrick' , 'Sandy', 'Seu Sirigueijo', 'Plankton']
 
 const mapToStrings = numeros.map((numero) => (`Número: ${numero}`))
 console.log(mapToStrings)
@@ -13,7 +14,8 @@ console.log(mapBiggerNums)
 
 // Usar reduce para encontrar o produto de todos os números em um array.
 
-// const produtoNums = 
+const produtoNums = numeros.reduce((acc, value) => (acc *= value))
+console.log(produtoNums)
 
 // // Usar some para verificar se há algum número negativo em um array.
 
@@ -37,9 +39,12 @@ const bothArraysNums = (arr1, arr2) => {
 
 console.log(bothArraysNums(numeros,numeros2))
 
-// const bothArrays = 
+// const bothArrays =
 
-// Usar concat para juntar dois arrays em um só.
+// Usar map com strings
+
+constMapStrings = personagens.map((personagem) => (personagem.toString(personagem.split('-'))))
+console.log(constMapStrings)
 
 // Usar sort para ordenar objetos dentro de um array com base em uma propriedade.
 
