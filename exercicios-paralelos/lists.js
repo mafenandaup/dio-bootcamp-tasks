@@ -55,6 +55,10 @@ const sortedNumbers = numeros.sort(compareElements)
 console.log(sortedNumbers)
 
 // Usar splice para remover elementos de um array e adicionar novos em sua posição.
+const months = ["Jan", "March", "April", "June"];
+months.splice(1,0, "Feb") // começa no indice 1 e remove 0 elementos, adicionando "Feb"
+months.splice(4, 1, "May"); // começa no indice 4 e remove 1 elemento 
+console.log(months);
 
 // Criar uma função que percorra uma lista e imprima cada elemento formatado com sua posição no array.
 
