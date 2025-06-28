@@ -1,6 +1,6 @@
 //Usar map para transformar um array de números em strings com prefixo "Número: ".
 
-const numeros = [23, 4, 56, 7, 2, 3, 9, 1]
+const numeros = [23, -20, 56, 7, 2, 3, 9, 1]
 const numeros2 = [3, 43, 6, 27, 2, 3, 9, 1]
 const personagens = ['Bob esponja', 'Patrick' , 'Sandy', 'Seu Sirigueijo', 'Plankton']
 
@@ -19,7 +19,8 @@ console.log(produtoNums)
 
 // // Usar some para verificar se há algum número negativo em um array.
 
-// const hasNegative =
+const hasNegative = numeros.reduce((value) => value < 0)
+console.log(hasNegative)
 
 // // Usar includes para verificar se um valor específico está presente em um array.
 
@@ -39,14 +40,19 @@ const bothArraysNums = (arr1, arr2) => {
 
 console.log(bothArraysNums(numeros,numeros2))
 
-// const bothArrays =
-
 // Usar map com strings
 
 constMapStrings = personagens.map((personagem) => (personagem.toString(personagem.split('-'))))
 console.log(constMapStrings)
 
 // Usar sort para ordenar objetos dentro de um array com base em uma propriedade.
+
+const compareElements = (a, b) => {
+    return a-b
+}
+
+const sortedNumbers = numeros.sort(compareElements)
+console.log(sortedNumbers)
 
 // Usar splice para remover elementos de um array e adicionar novos em sua posição.
 
